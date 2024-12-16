@@ -12,16 +12,19 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="176"
-  DTS:VersionGUID="{D13A501C-6CD7-443D-98F4-7D0C89632105}">
+  DTS:VersionBuild="253"
+  DTS:VersionGUID="{592A217B-4E5E-4761-9C9C-9CECD7C043B3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
       DTS:DTSID="{F07542D6-76F8-4D70-AA9A-C58135E426C7}"
       DTS:ObjectName="Flat File Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::fullfilepath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -31,47 +34,55 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\HP\Desktop\407454_CURRENCYRATE.csv">
+          DTS:ConnectionString="C:\Users\HP\Downloads\bazy9\.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x007C_"
-              DTS:DataType="3"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="CurrencyKey"
-              DTS:DTSID="{E2E2B860-C93F-4A5C-9FAA-0552D10C6373}"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{C7D9B2B9-5110-4BB4-A4DB-A3528FBC8B38}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x007C_"
-              DTS:DataType="3"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="DateKey"
-              DTS:DTSID="{F19360BF-E0D0-4A5C-ABD9-5B282EAB0DC0}"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{B2A28D16-F945-4074-B0AA-66FD168D3083}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x007C_"
-              DTS:DataType="5"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="AverageRate"
-              DTS:DTSID="{534EA671-48B8-4478-BC65-94C85C86A868}"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{075278CD-2BAA-4326-AF74-73FF498A4E81}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x007C_"
-              DTS:DataType="5"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="EndOfDayRate"
-              DTS:DTSID="{AD8D0DA9-688E-4530-A6B6-38186181DEC5}"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{07086615-87DC-4623-BF58-679D6BA36DC6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D_"
-              DTS:DataType="135"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Date"
-              DTS:DTSID="{8F3B898E-473B-4783-A368-D5029EA8C853}"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{7268A74A-F59E-4D95-BB3F-48FEB5FC9782}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 5"
+              DTS:DTSID="{C4102221-41E5-4B84-825A-43682D97A1ED}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -80,8 +91,10 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{C3FC9C90-A00B-4792-8F75-A969A9C6B167}"
+      DTS:DTSID="{26D11F47-6C26-4C84-B5E1-6A047CA53615}"
       DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::fullfilepath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -90,129 +103,62 @@
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\HP\Desktop\407454_CURR2.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x0009_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CurrencyKey"
-              DTS:DTSID="{4C227E8C-BFDD-461F-B5AF-706883C4821A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x0009_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DateKey"
-              DTS:DTSID="{B3218C89-B22C-439B-A3C3-CFD55579893E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x0009_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="AverageRate"
-              DTS:DTSID="{3EA1B850-A752-441A-8EB6-88C2CB388E9B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x0009_"
-              DTS:DataType="5"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EndOfDayRate"
-              DTS:DTSID="{ECF7A899-3CD8-497D-B996-A901BD3CA337}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x0009_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Date"
-              DTS:DTSID="{9E8A3493-B291-4749-921F-0C60DAB603DD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="3"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CurrencyAlternateKey"
-              DTS:DTSID="{8B659533-4F1B-4441-A74B-9F2FE7B10F1C}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{1DDB8E27-4C85-4DA4-A9DE-89445B2EEB6B}"
-      DTS:ObjectName="Flat File Connection Manager 2">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1045"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Maciek\OneDrive\Pulpit\Socks407454.txt">
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\HP\Downloads\bazy9\.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="101"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="FullName"
-              DTS:DTSID="{94942384-DD9D-4B33-819F-3810B9CDD1CC}"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{192F4770-BCE6-4F2D-AB65-EBB27EE9BA4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{9C6DFDD0-FB58-47C0-9D8A-DF59022A4A27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{90A7BA1A-A9AC-4D5F-B269-492E2115AB00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{0BCD7A5C-FE50-43EE-8D1C-D2C26CB52AF8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state"
+              DTS:DTSID="{F6AE37AB-8C4F-40A1-847E-13FEB6DF9284}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
               DTS:MaximumWidth="50"
-              DTS:DataType="130"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="EnglishProductName"
-              DTS:DTSID="{8C5E025D-64D4-4A05-88BE-865DCECA6F02}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{811F978C-9A58-4711-A8E2-356E362DA907}"
-      DTS:ObjectName="Flat File Connection Manager 3">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1045"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Maciek\OneDrive\Pulpit\Socks407454.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="135"
-              DTS:TextQualified="True"
-              DTS:ObjectName="OrderDate"
-              DTS:DTSID="{D85EED7E-C5E5-4FF4-9F9E-7231E10D0964}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="21"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Orders_cnt"
-              DTS:DTSID="{551CC8A4-4DFA-44C3-B663-84647E7343EF}"
+              DTS:ObjectName="file_id"
+              DTS:DTSID="{1D1DB165-7BCC-41B0-A51D-4B3260A78B6E}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -316,12 +262,30 @@
   <DTS:PackageParameters>
     <DTS:PackageParameter
       DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{30F8096B-B5BF-44BA-8B60-2CA7A9B6CB2A}"
+      DTS:ObjectName="folderpath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Users\HP\Downloads\bazy9</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
       DTS:DataType="3"
       DTS:DTSID="{AAE2D0F4-21FF-4F4E-A243-4AC6440B3973}"
       DTS:ObjectName="JobNum">
       <DTS:Property
         DTS:DataType="3"
         DTS:Name="ParameterValue">407454</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{60322BE4-E277-40B9-A438-3AFC34840816}"
+      DTS:ObjectName="sourcepath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Users\HP\Downloads\bazy9</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -334,6 +298,36 @@
     </DTS:PackageParameter>
   </DTS:PackageParameters>
   <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C9E17549-BE03-4C4A-8892-1DF098C6344F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="counter">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E8C0E057-154B-448C-BFA5-ED3550A174BF}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="filename">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{978600C6-F27A-4A0E-A083-C7A867CA2F84}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::sourcepath]  + &quot;\\&quot; +  @[User::filename] + &quot;.csv&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="fullfilepath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\HP\Downloads\bazy9\.csv</DTS:VariableValue>
+    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{376A9C42-4C16-4892-B026-20BC89208695}"
@@ -404,61 +398,44 @@
                   refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input]"
                   hasSideEffects="true"
                   name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrencyKey]"
-                      cachedDataType="i4"
-                      cachedName="CurrencyKey"
-                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyKey]"
-                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[CurrencyKey]" />
-                    <inputColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[AverageRate]"
-                      cachedDataType="r8"
-                      cachedName="AverageRate"
-                      cachedSortKeyPosition="-1"
-                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
-                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[AverageRate]" />
-                    <inputColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndOfDayRate]"
-                      cachedDataType="r8"
-                      cachedName="EndOfDayRate"
-                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
-                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[EndOfDayRate]" />
-                    <inputColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[Date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Date"
-                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[Date]" />
-                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyKey]"
-                      dataType="i4"
-                      name="CurrencyKey" />
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Column 0]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="Column 0" />
                     <externalMetadataColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Column 1]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="Column 1" />
                     <externalMetadataColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
-                      dataType="r8"
-                      name="AverageRate" />
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Column 2]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="Column 2" />
                     <externalMetadataColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
-                      dataType="r8"
-                      name="EndOfDayRate" />
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Column 3]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="Column 3" />
                     <externalMetadataColumn
-                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Date]"
-                      dataType="dbTimeStamp"
-                      name="Date" />
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Column 4]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="Column 4" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Column 5]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="Column 5" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1180,8 +1157,8 @@
               <connections>
                 <connection
                   refId="Package\cw3\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerID="{C3FC9C90-A00B-4792-8F75-A969A9C6B167}:invalid"
+                  connectionManagerRefId="{C3FC9C90-A00B-4792-8F75-A969A9C6B167}:invalid"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -1835,8 +1812,8 @@ where [refTable].[CurrencyKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\cw4\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerID="{1DDB8E27-4C85-4DA4-A9DE-89445B2EEB6B}:invalid"
+                  connectionManagerRefId="{1DDB8E27-4C85-4DA4-A9DE-89445B2EEB6B}:invalid"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -3450,8 +3427,8 @@ where [refTable].[CurrencyKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\cw5\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 3]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                  connectionManagerID="{811F978C-9A58-4711-A8E2-356E362DA907}:invalid"
+                  connectionManagerRefId="{811F978C-9A58-4711-A8E2-356E362DA907}:invalid"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -6182,7 +6159,7 @@ where [refTable].[CurrencyKey] = ?</property>
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="CW7_IF_EXISTS"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -6192,14 +6169,35 @@ where [refTable].[CurrencyKey] = ?</property>
           Language="CSharp"
           ReadWriteVariables="User::Result">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_60af2a327bc24334ac15bc69908a194d")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP")]
+[assembly: AssemblyProduct("ST_60af2a327bc24334ac15bc69908a194d")]
+[assembly: AssemblyCopyright("Copyright @ HP 2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -6559,35 +6557,14 @@ namespace ST_60af2a327bc24334ac15bc69908a194d.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_60af2a327bc24334ac15bc69908a194d")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP")]
-[assembly: AssemblyProduct("ST_60af2a327bc24334ac15bc69908a194d")]
-[assembly: AssemblyCopyright("Copyright @ HP 2024")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="ST_60af2a327bc24334ac15bc69908a194d.csproj"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -8215,6 +8192,569 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Execute Process Task"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{1C5B9D2D-7A9B-4401-AB0D-D81C87C81010}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Process Task"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Arguments">"e C:\\Users\\HP\\Downloads\\cw9_in.7z"</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="WorkingDirectory">@[$Package::folderpath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Program Files\7-Zip\7z.exe"
+          Arguments="e C:\Users\HP\Downloads\cw9_in.7z"
+          WorkingDirectory="C:\Users\HP\Downloads\bazy9" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E074A9F2-341A-470A-AB4F-0220134F4577}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{88059D17-3719-404F-8F85-A9CDDAA6A279}"
+          SQLTask:SqlStatementSource="DROP TABLE IF EXISTS dbo.STG_CUSTOMERS&#xA;&#xA;CREATE TABLE dbo.STG_CUSTOMERS (&#xA;first_name VARCHAR(50),&#xA;last_name VARCHAR(50),&#xA;email VARCHAR(50),&#xA;city VARCHAR(50),&#xA;state VARCHAR(50),&#xA;in_file VARCHAR(50));" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\For Loop Container"
+      DTS:AssignExpression="@counter = @counter + 2"
+      DTS:CreationName="STOCK:FORLOOP"
+      DTS:Description="For Loop Container"
+      DTS:DTSID="{C4150007-6450-498D-8557-F3E0F977B0F2}"
+      DTS:EvalExpression="@counter &lt;=10"
+      DTS:ExecutableType="STOCK:FORLOOP"
+      DTS:InitExpression="@counter &lt;=10"
+      DTS:LocaleID="-1"
+      DTS:MaxConcurrent="1"
+      DTS:ObjectName="For Loop Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\For Loop Container\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2B8FDE23-0021-403B-B718-1F6C3A251264}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{88059D17-3719-404F-8F85-A9CDDAA6A279}"
+              SQLTask:SqlStatementSource="UPDATE dbo.STG_CUSTOMERS&#xA;SET email = NULL&#xA;WHERE in_file = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="NewParameterName"
+                SQLTask:DtsVariableName="User::counter"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="2"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{63A9A365-D7FC-4B08-AE15-1F8F2FD595D0}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{8B0F64EC-AE87-4FDB-AF70-6D63F96CFEA3}"
+        DTS:ObjectName="{8B0F64EC-AE87-4FDB-AF70-6D63F96CFEA3}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">"C:\\Users\\HP\\Downloads\\bazy9"</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\HP\Downloads\bazy9" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="2" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{74201338-AB91-4839-A6C6-F593035A06B2}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1045"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
+                          name="first_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
+                          name="last_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[email]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[email]"
+                          name="email"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                          name="city"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[state]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[state]"
+                          name="state"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[file_id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[file_id]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[file_id]"
+                          name="file_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="first_name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="last_name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="email" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="city" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="state" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[file_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="file_id" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1250"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[STG_CUSTOMERS]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LAPTOP-HLGFF2FQ\MSSQLSERVER2.AdventureWorksDW2019]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-HLGFF2FQ\MSSQLSERVER2.AdventureWorksDW2019]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[first_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="first_name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[last_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="last_name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[email]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="email"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[email]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[city]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="city"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[city]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[state]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="state"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[state]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[file_id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="file_id"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[in_file]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[file_id]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="first_name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="last_name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="email" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="city" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="state" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[in_file]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="in_file" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{7010BA17-F5BB-45B7-8608-AB7C87E86569}"
+          DTS:ObjectName="{7010BA17-F5BB-45B7-8608-AB7C87E86569}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::filename" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Insert 1 1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -8271,7 +8811,7 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
       DTS:LocaleID="-1"
       DTS:ObjectName="Insert 2 1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8295,7 +8835,7 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
       DTS:LocaleID="-1"
       DTS:ObjectName="Insert 2 2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -8320,7 +8860,7 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
       DTS:LocaleID="-1"
       DTS:ObjectName="Send Mail Task"
       DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData />
     </DTS:Executable>
@@ -8346,6 +8886,22 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Insert 2 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{C155B8BA-5DD4-4EA7-8348-80F0BC84AD10}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 10"
+      DTS:To="Package\Execute Process Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{4B28C14B-21F1-4FF6-9D8C-336494D9611E}"
+      DTS:From="Package\Foreach Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\For Loop Container" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -8402,6 +8958,14 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
       DTS:ObjectName="Constraint 8"
       DTS:To="Package\Send Mail Task"
       DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{BC50C779-D93A-4417-A3BD-A214B38C0660}"
+      DTS:From="Package\Execute Process Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\Foreach Loop Container" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -8414,27 +8978,27 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:s="clr-namespace:System;assembly=mscorlib">
         <NodeLayout
           Size="99,42"
           Id="Package\cw2"
-          TopLeft="97.5,68.5" />
+          TopLeft="116.071428571429,49.9285714285715" />
         <NodeLayout
           Size="99,42"
           Id="Package\cw3"
-          TopLeft="303.5,76.5" />
+          TopLeft="110.642857142857,106.5" />
         <NodeLayout
           Size="99,42"
           Id="Package\cw4"
-          TopLeft="588,109" />
+          TopLeft="105.142857142857,169" />
         <NodeLayout
           Size="99,42"
           Id="Package\cw5"
-          TopLeft="710.5,115.5" />
+          TopLeft="101.928571428571,231.214285714285" />
         <NodeLayout
           Size="99,42"
           Id="Package\cw6"
-          TopLeft="228,155" />
+          TopLeft="98,287.857142857142" />
         <NodeLayout
           Size="181,42"
           Id="Package\cw7_Data Flow Task"
@@ -8775,13 +9339,13 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
         </EdgeLayout>
         <GroupLayout
           Text="cw7"
-          ParentId="Package"
+          ParentId="58c5da5e-8bb5-4dd4-a3b4-b999836c2595"
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="499,544"
-          Size="499,587"
+          PanelSize="553,516"
+          Size="553,559"
           Id="adeec81d-48c3-4ec1-9ddb-6874579ecd63"
-          TopLeft="456.5,60.5">
+          TopLeft="6.92857142857144,2.64285714285722">
           <GroupLayout.ChildrenIds>
             <s:String>Package\cw7_Data Flow Task</s:String>
             <s:String>Package\cw7_exists</s:String>
@@ -8803,6 +9367,170 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
             <s:String>Package.PrecedenceConstraints[Constraint 8]</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
+        <GroupLayout
+          Text="cw8"
+          ParentId="Package"
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="564,600"
+          Size="564,643"
+          Id="58c5da5e-8bb5-4dd4-a3b4-b999836c2595"
+          TopLeft="279.571428571428,44.0714285714287">
+          <GroupLayout.ChildrenIds>
+            <s:String>adeec81d-48c3-4ec1-9ddb-6874579ecd63</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Execute Process Task"
+          TopLeft="24.5,91.5000000000002" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Foreach Loop Container\Data Flow Task"
+          TopLeft="42,13" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="240,68"
+          Size="240,111"
+          Id="Package\Foreach Loop Container"
+          TopLeft="7.5,172.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="118.5,133.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,39"
+              Start="0,0"
+              End="9,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="4,19.5" />
+                  <mssgle:LineSegment
+                    End="5,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,19.5"
+                    Point2="9,19.5"
+                    Point3="9,23.5" />
+                  <mssgle:LineSegment
+                    End="9,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="90.5,47.5000000000002">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28,44"
+              Start="0,0"
+              End="28,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="24,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24,22"
+                    Point2="28,22"
+                    Point3="28,26" />
+                  <mssgle:LineSegment
+                    End="28,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="175,47"
+          Id="Package\For Loop Container\Execute SQL Task"
+          TopLeft="39,20" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="283,131"
+          Size="283,174"
+          Id="Package\For Loop Container"
+          TopLeft="27.5,325.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="127.5,283.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41.5,42"
+              Start="0,0"
+              End="41.5,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="37.5,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37.5,21"
+                    Point2="41.5,21"
+                    Point3="41.5,25" />
+                  <mssgle:LineSegment
+                    End="41.5,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <GroupLayout
+          Text="cw9"
+          ParentId="Package"
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="316,555"
+          Size="316,598"
+          Id="ef300cf5-d19e-4f92-b090-2330fc141d21"
+          TopLeft="870.357142857143,40.2142857142856">
+          <GroupLayout.ChildrenIds>
+            <s:String>Package\Execute Process Task</s:String>
+            <s:String>Package\Foreach Loop Container</s:String>
+            <s:String>Package.PrecedenceConstraints[Constraint 9]</s:String>
+            <s:String>Package\Execute SQL Task</s:String>
+            <s:String>Package.PrecedenceConstraints[Constraint 10]</s:String>
+            <s:String>Package\For Loop Container</s:String>
+            <s:String>Package.PrecedenceConstraints[Constraint 11]</s:String>
+          </GroupLayout.ChildrenIds>
+        </GroupLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -8812,6 +9540,10 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="123,42"
+          Id="Package\cw2\Multicast"
+          TopLeft="259,222" />
+        <NodeLayout
           Size="157,42"
           Id="Package\cw2\OLE DB Source"
           TopLeft="231,78" />
@@ -8820,17 +9552,49 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
           Id="Package\cw2\Sort"
           TopLeft="243,148" />
         <NodeLayout
-          Size="169,42"
-          Id="Package\cw2\ODBC Destination"
-          TopLeft="418,347" />
-        <NodeLayout
           Size="176,42"
           Id="Package\cw2\Flat File Destination"
           TopLeft="128,346" />
         <NodeLayout
-          Size="123,42"
-          Id="Package\cw2\Multicast"
-          TopLeft="259,222" />
+          Size="169,42"
+          Id="Package\cw2\ODBC Destination"
+          TopLeft="418,347" />
+        <EdgeLayout
+          Id="Package\cw2.Paths[Multicast Output 1]"
+          TopLeft="301.333333333333,264">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-85.3333333333333,82"
+              Start="0,0"
+              End="-85.3333333333333,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4317817014446" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.4317817014446"
+                    Point2="0,33.4317817014446"
+                    Point3="-4,33.4317817014446" />
+                  <mssgle:LineSegment
+                    End="-81.3333333333333,33.4317817014446" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81.3333333333333,33.4317817014446"
+                    Point2="-85.3333333333333,33.4317817014446"
+                    Point3="-85.3333333333333,37.4317817014446" />
+                  <mssgle:LineSegment
+                    End="-85.3333333333333,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\cw2.Paths[Sort Output]"
           TopLeft="292.5,190">
@@ -8929,42 +9693,6 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
                     Point3="162.833333333333,37.8394863563403" />
                   <mssgle:LineSegment
                     End="162.833333333333,75.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\cw2.Paths[Multicast Output 1]"
-          TopLeft="301.333333333333,264">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-85.3333333333333,82"
-              Start="0,0"
-              End="-85.3333333333333,74.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.4317817014446" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.4317817014446"
-                    Point2="0,33.4317817014446"
-                    Point3="-4,33.4317817014446" />
-                  <mssgle:LineSegment
-                    End="-81.3333333333333,33.4317817014446" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-81.3333333333333,33.4317817014446"
-                    Point2="-85.3333333333333,33.4317817014446"
-                    Point3="-85.3333333333333,37.4317817014446" />
-                  <mssgle:LineSegment
-                    End="-85.3333333333333,74.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10153,7 +10881,7 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
     design-time-name="Package\cw7_Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="177,42"
           Id="Package\cw7_Data Flow Task\OLE DB Destination"
@@ -10201,7 +10929,9 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10235,7 +10965,9 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10269,7 +11001,9 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10348,7 +11082,9 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10454,7 +11190,9 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10476,7 +11214,9 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10507,6 +11247,69 @@ where [refTable].[FirstName] = ? and [refTable].[LastName] = ? and [refTable].[E
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\cw7_not_exists\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+          TopLeft="233,120" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
+          TopLeft="456,316" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="311,162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="233.5,154"
+              Start="0,0"
+              End="233.5,146.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,73"
+                    Point2="0,77"
+                    Point3="4,77" />
+                  <mssgle:LineSegment
+                    End="229.5,77" />
+                  <mssgle:CubicBezierSegment
+                    Point1="229.5,77"
+                    Point2="233.5,77"
+                    Point3="233.5,81" />
+                  <mssgle:LineSegment
+                    End="233.5,146.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
