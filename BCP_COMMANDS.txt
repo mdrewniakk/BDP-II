@@ -1,0 +1,3 @@
+bcp AdventureWorksDW2019.dbo.CUSTOMERS_407454 format nul -f customers_load.fmt -t "," -c -T -S LAPTOP-HLGFF2FQ\MSSQLSERVER2
+
+bcp AdventureWorksDW2019.dbo.CUSTOMERS_407454 in PROCESSED\20250115130805_InternetSales.csv -t "," -f customers_load.fmt -T -S LAPTOP-HLGFF2FQ\MSSQLSERVER2
